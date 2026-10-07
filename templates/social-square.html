@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SWE social post (1:1)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/swe.css">
+<style>
+  /* Edit the text in <body>. Export at 1080x1080 (see the README). All sizes are in cqw so the post scales as one piece. */
+  html, body { margin: 0; height: 100%; background: #05102a; }
+  body { display: grid; place-items: center; overflow: hidden; }
+  .canvas {
+    width: min(100vw, 100vh);
+    aspect-ratio: 1;
+    container-type: inline-size;
+  }
+  .post {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 8cqw;
+    display: flex; flex-direction: column;
+    font-size: 3cqw;
+  }
+  .swe-kicker { font-size: 2.5cqw; letter-spacing: .2em; color: var(--swe-steel); }
+  .swe-title { margin-top: 5cqw; font-size: var(--title-size, 16cqw); }
+  .tagline {
+    display: flex; align-items: center; gap: 2cqw;
+    margin: 6cqw 0 0;
+    color: var(--swe-white);
+    font: 700 3.2cqw/1.2 var(--swe-mono); letter-spacing: .12em; text-transform: uppercase;
+  }
+  .tagline::before { content: ""; flex: none; width: 9cqw; height: 1.1cqw; background: var(--swe-gold); }
+  .details { margin: 4cqw 0 0; max-width: 30em; color: var(--swe-soft); font-size: 2.7cqw; line-height: 1.6; }
+  .foot { display: flex; align-items: flex-end; justify-content: space-between; margin-top: auto; }
+  .foot img { display: block; height: 7cqw; }
+  .foot p { margin: 0; color: var(--swe-steel); font: 400 2.1cqw/1.5 var(--swe-mono); letter-spacing: .16em; text-transform: uppercase; text-align: right; }
+  .foot p b { display: block; color: var(--swe-gold); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <main class="post swe-surface swe-grid">
+    <p class="swe-kicker">Software Engineering Club</p>
+    <!-- Long title? Lower --title-size, e.g. style="--title-size: 11cqw" -->
+    <h1 class="swe-title">Weekly<br>Meeting</h1>
+    <p class="tagline">[Day] [Time] @ [Room]</p>
+    <p class="details">One or two plain sentences on what is happening and who it is for.</p>
+    <div class="foot">
+      <img src="../assets/logo/swe-prompt.svg" alt="SWE">
+      <p><b>University of North Georgia</b>Dahlonega, Georgia</p>
+    </div>
+  </main>
+</div>
+</body>
+</html>
