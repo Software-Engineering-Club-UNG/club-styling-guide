@@ -8,11 +8,18 @@ How the UNG Software Engineering Club looks and sounds: flyers, social posts, sl
 
 The short version: **a terminal at UNG.** UNG Blue and Gold, monospace type, a prompt and a cursor, square corners, hard shadows.
 
+## At a glance
+
+![SWE style at a glance: colors, type, elements, and rules](assets/at-a-glance.png)
+
+That image is the whole guide on one page. Save it, pin it in Discord, and read on only when you need the details.
+
 ## What's in this repo
 
 | Path | What it is |
 | --- | --- |
 | [`assets/logo/`](assets/logo) | The mark as SVG and PNG, plus transparent lockups |
+| [`assets/at-a-glance.png`](assets/at-a-glance.png) | The one-page summary above (source: `assets/at-a-glance.html`) |
 | [`assets/palette.svg`](assets/palette.svg) | The palette as an image |
 | [`tokens/swe.css`](tokens/swe.css) | Colors, fonts, and a few shared building blocks as CSS |
 | [`templates/event-banner.html`](templates/event-banner.html) | 16:9 banner for slides, Discord, and UNG Connect |
