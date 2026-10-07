@@ -11,22 +11,26 @@
   --swe-blue-deep: #001a52;  /* gradient edge */
   --swe-blue-lift: #0a44b8;  /* gradient centre, glow */
   --swe-cobalt: #164bc4;     /* hard shadows, grid lines, title bars */
+  --swe-night: #122c74;      /* page background for the typewriter look (hacklonega.dev) */
 
   /* Text on dark */
   --swe-white: #ffffff;
   --swe-cream: #f3eedf;      /* body text, light surfaces */
   --swe-soft: #dbe4f5;       /* secondary text */
   --swe-steel: #7d96bf;      /* kickers and captions on navy only */
+  --swe-chrome: #dddccd;     /* window chrome in the retro desktop frame */
 
   --swe-gold-hover: #ffdc75;
   --swe-rule: rgb(243 238 223 / .28);
 
   /* Type */
   --swe-mono: "JetBrains Mono", ui-monospace, "Courier New", monospace;
+  --swe-typewriter: "Courier New", Courier, monospace; /* lowercase wordmarks and pixel-look labels */
   --swe-sans: Tahoma, Verdana, system-ui, sans-serif;
 
   /* Shape: square corners, hard offset shadows, no blur */
   --swe-shadow: 4px 4px 0 var(--swe-cobalt);
+  --swe-shadow-on-blue: 4px 4px 0 var(--swe-navy); /* cobalt vanishes on blue pages */
 }
 
 /* Surfaces */
@@ -40,6 +44,8 @@
 }
 .swe-surface :focus-visible { outline: 3px solid var(--swe-gold); outline-offset: 5px; }
 .swe-surface ::selection { background: var(--swe-gold); color: var(--swe-navy); }
+
+.swe-surface--night { background: var(--swe-night); }
 
 /* Backgrounds: a line grid for navy, a dot grid for blue. Sizes are in em so they scale with the surface. */
 .swe-grid {
@@ -104,3 +110,14 @@
   text-transform: uppercase;
 }
 .swe-panel__bar b { color: var(--swe-gold); font-weight: 700; }
+
+/* Typewriter wordmark: lowercase, tight, gold, with a cream full stop. Wrap the stop in <span>. */
+.swe-wordmark {
+  margin: 0;
+  color: var(--swe-gold);
+  font: 700 1em/1 var(--swe-typewriter);
+  letter-spacing: -.07em;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.swe-wordmark span { color: var(--swe-cream); }

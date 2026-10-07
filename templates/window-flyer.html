@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SWE window flyer (16:9)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/swe.css">
+<style>
+  /* The retro desktop frame from the Hacklonega flyers. Edit the text in <body>. Export at 1920x1080 (see the README).
+     All sizes are in cqw so the flyer scales as one piece. */
+  html, body { margin: 0; height: 100%; background: #05102a; }
+  body { display: grid; place-items: center; overflow: hidden; }
+  .canvas { width: min(100vw, calc(100vh * 16 / 9)); aspect-ratio: 16 / 9; container-type: inline-size; }
+  .desktop {
+    --start: #4f9a45; --close: #d9482b; /* the only two off-palette colors, and only on these two buttons */
+    box-sizing: border-box; height: 100%;
+    display: grid; grid-template-rows: 1fr 3.4cqw;
+    background: var(--swe-night);
+  }
+  .stage { padding: 2.2cqw 2.4cqw; min-height: 0; }
+
+  .window {
+    box-sizing: border-box; height: 100%;
+    display: grid; grid-template-rows: auto auto 1fr auto;
+    background: var(--swe-cream);
+    border: .3cqw solid var(--swe-cobalt);
+    box-shadow: .7cqw .7cqw 0 var(--swe-navy);
+  }
+  .titlebar {
+    display: flex; align-items: center; gap: 1cqw;
+    padding: .55cqw .7cqw;
+    background: var(--swe-cobalt); color: var(--swe-white);
+    font: 700 1.3cqw/1 var(--swe-typewriter); letter-spacing: .08em; text-transform: uppercase;
+  }
+  .titlebar .icon { display: grid; place-items: center; width: 2cqw; height: 1.8cqw; background: var(--swe-chrome); color: var(--swe-navy); font: 800 1cqw/1 var(--swe-mono); letter-spacing: 0; }
+  .titlebar .controls { display: flex; gap: .4cqw; margin-left: auto; }
+  .titlebar .controls span { display: grid; place-items: center; width: 1.9cqw; height: 1.7cqw; border: .16cqw solid var(--swe-white); font: 700 1.1cqw/1 var(--swe-mono); letter-spacing: 0; }
+  .titlebar .controls .x { background: var(--close); }
+  .menubar { display: flex; gap: 2cqw; padding: .6cqw 1.1cqw; border-bottom: .16cqw solid var(--swe-chrome); color: var(--swe-navy); font: 400 1.15cqw/1.2 var(--swe-sans); }
+  .menubar span::first-letter { text-decoration: underline; }
+  .statusbar { margin: .5cqw; padding: .4cqw .9cqw; border: .12cqw solid var(--swe-chrome); color: var(--swe-navy); font: 700 .9cqw/1.3 var(--swe-typewriter); letter-spacing: .1em; text-transform: uppercase; }
+
+  .content {
+    margin: .5cqw .5cqw 0; padding: 2.4cqw 2.8cqw; min-height: 0;
+    display: grid; grid-template-columns: 1fr 19cqw; gap: 3cqw; align-items: center;
+    border: .25cqw solid var(--swe-navy);
+    font-size: 1.4cqw;
+  }
+  .head { display: flex; align-items: center; gap: 1cqw; }
+  .chip { display: grid; place-items: center; width: 3.2cqw; height: 2.3cqw; background: var(--swe-blue); border: .18cqw solid var(--swe-gold); color: var(--swe-gold); font: 800 1.2cqw/1 var(--swe-mono); }
+  .swe-kicker { font: 700 1.25cqw/1.5 var(--swe-typewriter); letter-spacing: .26em; color: var(--swe-steel); }
+  .swe-title { margin-top: 2cqw; font-size: var(--title-size, 8.6cqw); }
+  .tagline { display: flex; align-items: center; gap: 1cqw; margin: 2.4cqw 0 0; color: var(--swe-white); font: 700 1.6cqw/1.2 var(--swe-typewriter); letter-spacing: .18em; text-transform: uppercase; }
+  .tagline::before { content: ""; flex: none; width: 6cqw; height: .6cqw; background: var(--swe-gold); }
+  .where { display: flex; align-items: center; gap: 1.2cqw; margin-top: 2.2cqw; }
+  .where::before { content: ""; flex: none; width: 1.1cqw; height: 2.2cqw; background: var(--swe-gold); }
+  .where p { margin: 0; font: 700 1cqw/1.7 var(--swe-typewriter); letter-spacing: .2em; text-transform: uppercase; }
+  .where .org { color: var(--swe-gold); }
+  .where .place { color: var(--swe-steel); font-weight: 400; }
+  .swe-panel img { display: block; width: 100%; }
+
+  .taskbar { display: flex; align-items: stretch; gap: .8cqw; background: var(--swe-cobalt); border-top: .2cqw solid var(--swe-steel); font: 700 1.1cqw/1 var(--swe-typewriter); letter-spacing: .08em; }
+  .taskbar > * { display: flex; align-items: center; padding: 0 1.2cqw; }
+  .taskbar .start { background: var(--start); color: var(--swe-white); font-style: italic; text-transform: lowercase; }
+  .taskbar .task { gap: .7cqw; margin: .4cqw 0; background: var(--swe-navy); color: var(--swe-white); text-transform: uppercase; }
+  .taskbar .task::before { content: ""; width: 1.1cqw; height: 1.1cqw; background: var(--swe-gold); }
+  .taskbar .clock { margin-left: auto; background: var(--swe-soft); color: var(--swe-navy); }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="desktop">
+    <div class="stage">
+      <div class="window">
+        <div class="titlebar">
+          <span class="icon" aria-hidden="true">&gt;_</span>
+          <span>C:\SWE\Meeting.exe</span>
+          <span class="controls" aria-hidden="true"><span>_</span><span>&#9633;</span><span class="x">&times;</span></span>
+        </div>
+        <div class="menubar" aria-hidden="true"><span>File</span><span>Edit</span><span>View</span><span>Hack</span><span>Help</span></div>
+        <main class="content swe-surface swe-grid">
+          <div>
+            <div class="head">
+              <span class="chip" aria-hidden="true">&gt;_</span>
+              <p class="swe-kicker">Software Engineering Club</p>
+            </div>
+            <!-- Long title? Lower --title-size, e.g. style="--title-size: 6.5cqw" -->
+            <h1 class="swe-title">Weekly<br>Meeting</h1>
+            <p class="tagline">[Day] [Time] @ [Room]</p>
+            <div class="where">
+              <div>
+                <p class="org">University of North Georgia</p>
+                <p class="place">Dahlonega, Georgia</p>
+              </div>
+            </div>
+          </div>
+          <aside class="swe-panel">
+            <div class="swe-panel__bar"><b>~/ung</b> // swe</div>
+            <img src="../assets/logo/swe-mark.svg" alt="UNG Software Engineering Club">
+          </aside>
+        </main>
+        <div class="statusbar">SWE @ UNG</div>
+      </div>
+    </div>
+    <!-- Set the clock to the event's start time -->
+    <div class="taskbar" aria-hidden="true">
+      <span class="start">start</span>
+      <span class="task">Meeting.exe</span>
+      <span class="clock">0:00 PM</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

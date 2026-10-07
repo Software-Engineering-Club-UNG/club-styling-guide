@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 432" role="img" aria-label="SWE Club colour palette" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
-<rect width="960" height="432" fill="#0a1938"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 412" role="img" aria-label="SWE Club colour palette" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<rect width="960" height="412" fill="#0a1938"/>
 <rect x="32.0" y="32" width="288.0" height="170" fill="#002f87" stroke="#7d96bf" stroke-opacity=".45"/>
 <text x="50.0" y="68" fill="#fff" font-size="20" font-weight="700">UNG Blue</text>
 <text x="50.0" y="160" fill="#fff" font-size="17" font-weight="700">#002F87</text>
@@ -12,28 +12,36 @@
 <text x="658.0" y="68" fill="#f3eedf" font-size="20" font-weight="700">Navy</text>
 <text x="658.0" y="160" fill="#f3eedf" font-size="17" font-weight="700">#0A1938</text>
 <text x="658.0" y="182" fill="#f3eedf" font-size="13" fill-opacity=".8">--swe-navy</text>
-<rect x="32.0" y="218" width="136.0" height="110" fill="#001a52" stroke="#7d96bf" stroke-opacity=".45"/>
-<text x="32.0" y="352" fill="#f3eedf" font-size="14" font-weight="700">Blue Deep</text>
-<text x="32.0" y="372" fill="#dbe4f5" font-size="13">#001A52</text>
-<text x="32.0" y="390" fill="#7d96bf" font-size="11">--swe-blue-deep</text>
-<rect x="184.0" y="218" width="136.0" height="110" fill="#0a44b8" stroke="#7d96bf" stroke-opacity=".45"/>
-<text x="184.0" y="352" fill="#f3eedf" font-size="14" font-weight="700">Blue Lift</text>
-<text x="184.0" y="372" fill="#dbe4f5" font-size="13">#0A44B8</text>
-<text x="184.0" y="390" fill="#7d96bf" font-size="11">--swe-blue-lift</text>
-<rect x="336.0" y="218" width="136.0" height="110" fill="#164bc4" stroke="#7d96bf" stroke-opacity=".45"/>
-<text x="336.0" y="352" fill="#f3eedf" font-size="14" font-weight="700">Cobalt</text>
-<text x="336.0" y="372" fill="#dbe4f5" font-size="13">#164BC4</text>
-<text x="336.0" y="390" fill="#7d96bf" font-size="11">--swe-cobalt</text>
-<rect x="488.0" y="218" width="136.0" height="110" fill="#f3eedf" stroke="#7d96bf" stroke-opacity=".45"/>
-<text x="488.0" y="352" fill="#f3eedf" font-size="14" font-weight="700">Cream</text>
-<text x="488.0" y="372" fill="#dbe4f5" font-size="13">#F3EEDF</text>
-<text x="488.0" y="390" fill="#7d96bf" font-size="11">--swe-cream</text>
-<rect x="640.0" y="218" width="136.0" height="110" fill="#dbe4f5" stroke="#7d96bf" stroke-opacity=".45"/>
-<text x="640.0" y="352" fill="#f3eedf" font-size="14" font-weight="700">Soft</text>
-<text x="640.0" y="372" fill="#dbe4f5" font-size="13">#DBE4F5</text>
-<text x="640.0" y="390" fill="#7d96bf" font-size="11">--swe-soft</text>
-<rect x="792.0" y="218" width="136.0" height="110" fill="#7d96bf" stroke="#7d96bf" stroke-opacity=".45"/>
-<text x="792.0" y="352" fill="#f3eedf" font-size="14" font-weight="700">Steel</text>
-<text x="792.0" y="372" fill="#dbe4f5" font-size="13">#7D96BF</text>
-<text x="792.0" y="390" fill="#7d96bf" font-size="11">--swe-steel</text>
+<rect x="32.0" y="218" width="98.0" height="90" fill="#001a52" stroke="#7d96bf" stroke-opacity=".45"/>
+<text x="32.0" y="332" fill="#f3eedf" font-size="14" font-weight="700">Blue Deep</text>
+<text x="32.0" y="352" fill="#dbe4f5" font-size="13">#001A52</text>
+<text x="32.0" y="370" fill="#7d96bf" font-size="11">blue-deep</text>
+<rect x="146.0" y="218" width="98.0" height="90" fill="#0a44b8" stroke="#7d96bf" stroke-opacity=".45"/>
+<text x="146.0" y="332" fill="#f3eedf" font-size="14" font-weight="700">Blue Lift</text>
+<text x="146.0" y="352" fill="#dbe4f5" font-size="13">#0A44B8</text>
+<text x="146.0" y="370" fill="#7d96bf" font-size="11">blue-lift</text>
+<rect x="260.0" y="218" width="98.0" height="90" fill="#164bc4" stroke="#7d96bf" stroke-opacity=".45"/>
+<text x="260.0" y="332" fill="#f3eedf" font-size="14" font-weight="700">Cobalt</text>
+<text x="260.0" y="352" fill="#dbe4f5" font-size="13">#164BC4</text>
+<text x="260.0" y="370" fill="#7d96bf" font-size="11">cobalt</text>
+<rect x="374.0" y="218" width="98.0" height="90" fill="#122c74" stroke="#7d96bf" stroke-opacity=".45"/>
+<text x="374.0" y="332" fill="#f3eedf" font-size="14" font-weight="700">Night</text>
+<text x="374.0" y="352" fill="#dbe4f5" font-size="13">#122C74</text>
+<text x="374.0" y="370" fill="#7d96bf" font-size="11">night</text>
+<rect x="488.0" y="218" width="98.0" height="90" fill="#f3eedf" stroke="#7d96bf" stroke-opacity=".45"/>
+<text x="488.0" y="332" fill="#f3eedf" font-size="14" font-weight="700">Cream</text>
+<text x="488.0" y="352" fill="#dbe4f5" font-size="13">#F3EEDF</text>
+<text x="488.0" y="370" fill="#7d96bf" font-size="11">cream</text>
+<rect x="602.0" y="218" width="98.0" height="90" fill="#dbe4f5" stroke="#7d96bf" stroke-opacity=".45"/>
+<text x="602.0" y="332" fill="#f3eedf" font-size="14" font-weight="700">Soft</text>
+<text x="602.0" y="352" fill="#dbe4f5" font-size="13">#DBE4F5</text>
+<text x="602.0" y="370" fill="#7d96bf" font-size="11">soft</text>
+<rect x="716.0" y="218" width="98.0" height="90" fill="#7d96bf" stroke="#7d96bf" stroke-opacity=".45"/>
+<text x="716.0" y="332" fill="#f3eedf" font-size="14" font-weight="700">Steel</text>
+<text x="716.0" y="352" fill="#dbe4f5" font-size="13">#7D96BF</text>
+<text x="716.0" y="370" fill="#7d96bf" font-size="11">steel</text>
+<rect x="830.0" y="218" width="98.0" height="90" fill="#dddccd" stroke="#7d96bf" stroke-opacity=".45"/>
+<text x="830.0" y="332" fill="#f3eedf" font-size="14" font-weight="700">Chrome</text>
+<text x="830.0" y="352" fill="#dbe4f5" font-size="13">#DDDCCD</text>
+<text x="830.0" y="370" fill="#7d96bf" font-size="11">chrome</text>
 </svg>

@@ -8,10 +8,10 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../tokens/swe.css">
 <style>
-  /* Source for at-a-glance.png. Export at 1600x1060 (see the README for the Chrome command). */
+  /* Source for at-a-glance.png. Export at 1600x1540 (see the README for the Chrome command). */
   html, body { margin: 0; }
-  body { width: 1600px; height: 1060px; overflow: hidden; }
-  .sheet { box-sizing: border-box; width: 1600px; height: 1060px; padding: 56px 64px; font-size: 24px; background-size: 40px 40px; }
+  body { width: 1600px; height: 1540px; overflow: hidden; }
+  .sheet { box-sizing: border-box; width: 1600px; height: 1540px; padding: 56px 64px; font-size: 24px; background-size: 40px 40px; }
   header { display: flex; align-items: center; gap: 36px; }
   header img { width: 150px; height: 150px; border: 4px solid var(--swe-steel); box-shadow: 10px 10px 0 var(--swe-cobalt); }
   header .swe-kicker { font-size: 22px; letter-spacing: .2em; color: var(--swe-steel); }
@@ -23,13 +23,17 @@
   .big { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .big div { height: 150px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; border: 2px solid rgb(125 150 191 / .5); font: 700 24px/1.2 var(--swe-mono); }
   .big span { font-size: 22px; }
-  .small { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-top: 14px; }
+  .small { display: grid; grid-template-columns: repeat(8, 1fr); gap: 14px; margin-top: 14px; }
   .small div { height: 62px; border: 2px solid rgb(125 150 191 / .5); }
-  .small p { margin: 8px 0 0; color: var(--swe-soft); font: 700 17px/1.3 var(--swe-mono); }
+  .small p { margin: 8px 0 0; color: var(--swe-soft); font: 700 15px/1.3 var(--swe-mono); letter-spacing: -.03em; }
 
   .type p { margin: 0; }
-  .type .name { color: var(--swe-white); font: 800 52px/1 var(--swe-mono); letter-spacing: -.02em; }
-  .type .row { display: grid; grid-template-columns: 150px 1fr; align-items: baseline; gap: 20px; margin-top: 20px; }
+  .type .name { color: var(--swe-white); font: 800 40px/1 var(--swe-mono); letter-spacing: -.02em; }
+  .type .name i { font: 700 40px/1 var(--swe-typewriter); color: var(--swe-soft); }
+  .type .name small { font: 400 26px/1 var(--swe-sans); color: var(--swe-steel); letter-spacing: 0; }
+  .type .w { color: var(--swe-gold); font: 700 46px/.9 var(--swe-typewriter); letter-spacing: -.07em; }
+  .type .w span { color: var(--swe-cream); }
+  .type .row { display: grid; grid-template-columns: 150px 1fr; align-items: baseline; gap: 20px; margin-top: 16px; }
   .type .label { color: var(--swe-steel); font: 700 18px/1.4 var(--swe-mono); letter-spacing: .14em; text-transform: uppercase; }
   .type .t { color: var(--swe-gold); font: 800 40px/1 var(--swe-mono); letter-spacing: -.02em; text-shadow: 3px 3px 0 var(--swe-cobalt); }
   .type .k { color: var(--swe-soft); font: 700 22px/1.3 var(--swe-mono); letter-spacing: .16em; }
@@ -42,6 +46,11 @@
   .elements .swe-button { font-size: 24px; min-height: 0; box-shadow: 6px 6px 0 var(--swe-cobalt); }
   .elements .note { margin: 0; color: var(--swe-soft); font: 400 23px/1.4 var(--swe-sans); }
 
+  .range { grid-column: 1 / -1; }
+  .looks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .looks img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: left top; border: 4px solid var(--swe-steel); box-shadow: 8px 8px 0 var(--swe-cobalt); box-sizing: border-box; }
+  .looks h3 { margin: 24px 0 6px; color: var(--swe-gold); font: 700 24px/1.2 var(--swe-mono); letter-spacing: .14em; text-transform: uppercase; }
+  .looks p { margin: 0; color: var(--swe-soft); font: 400 22px/1.4 var(--swe-sans); }
   .rules { margin: 0; padding: 0; list-style: none; }
   .rules li { display: grid; grid-template-columns: 96px 1fr; gap: 18px; align-items: baseline; margin-bottom: 15px; color: var(--swe-cream); font: 400 24px/1.35 var(--swe-sans); }
   .rules b { font: 700 18px/1 var(--swe-mono); letter-spacing: .14em; padding: 7px 0; text-align: center; }
@@ -60,8 +69,17 @@
   </header>
 
   <div class="cols">
+    <section class="range">
+      <h2><b>01</b>Three looks, one palette</h2>
+      <div class="looks">
+        <div><img src="examples/event-banner.png" alt=""><h3>Prompt</h3><p>Everyday club posts. JetBrains Mono caps, the SWE mark.</p></div>
+        <div><img src="examples/hacklonega-site.png" alt=""><h3>Typewriter</h3><p>Websites. Giant lowercase Courier New, pixel ridges.</p></div>
+        <div><img src="examples/hacklonega-flyer.png" alt=""><h3>Pixel</h3><p>Event flyers. Block lettering, pixel art, retro windows.</p></div>
+      </div>
+    </section>
+
     <section>
-      <h2><b>01</b>Color</h2>
+      <h2><b>02</b>Color</h2>
       <div class="big">
         <div style="background:#002f87;color:#fff">UNG Blue<span>#002F87</span></div>
         <div style="background:#ffc62f;color:#0a1938">UNG Gold<span>#FFC62F</span></div>
@@ -71,22 +89,25 @@
         <section><div style="background:#001a52"></div><p>#001A52</p></section>
         <section><div style="background:#0a44b8"></div><p>#0A44B8</p></section>
         <section><div style="background:#164bc4"></div><p>#164BC4</p></section>
+        <section><div style="background:#122c74"></div><p>#122C74</p></section>
         <section><div style="background:#f3eedf"></div><p>#F3EEDF</p></section>
         <section><div style="background:#dbe4f5"></div><p>#DBE4F5</p></section>
         <section><div style="background:#7d96bf"></div><p>#7D96BF</p></section>
+        <section><div style="background:#dddccd"></div><p>#DDDCCD</p></section>
       </div>
     </section>
 
     <section class="type">
-      <h2><b>02</b>Type</h2>
-      <p class="name">JetBrains Mono</p>
+      <h2><b>03</b>Type</h2>
+      <p class="name">JetBrains Mono <small>+</small> <i>Courier New</i></p>
       <div class="row"><p class="label">Title</p><p class="t">HACK THE MOUNTAINS</p></div>
+      <div class="row"><p class="label">Wordmark</p><p class="w">hacklonega<span>.</span></p></div>
       <div class="row"><p class="label">Kicker</p><p class="k">DAHLONEGA'S FIRST HACKATHON</p></div>
-      <div class="row"><p class="label">Body</p><p class="b">Tahoma or Verdana for sentences people need to read.</p></div>
+      <div class="row"><p class="label">Body</p><p class="b">Tahoma or Verdana for sentences.</p></div>
     </section>
 
     <section>
-      <h2><b>03</b>Elements</h2>
+      <h2><b>04</b>Elements</h2>
       <div class="elements">
         <img src="logo/swe-prompt.svg" alt="">
         <p class="note">Gold prompt and block cursor</p>
@@ -98,9 +119,9 @@
     </section>
 
     <section>
-      <h2><b>04</b>Rules</h2>
+      <h2><b>05</b>Rules</h2>
       <ul class="rules">
-        <li class="do"><b>DO</b>Let blue and navy carry it. Gold is the accent.</li>
+        <li class="do"><b>DO</b>Pick one look per piece. Keep the palette in all of them.</li>
         <li class="do"><b>DO</b>Lead with what it is, when, and where.</li>
         <li class="do"><b>DO</b>Give the logo room: one cursor-width all round.</li>
         <li class="dont"><b>DON'T</b>Put gold text on white or cream.</li>
