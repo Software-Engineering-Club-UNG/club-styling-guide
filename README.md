@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo/swe-mark-400.png" alt="UNG Software Engineering Club" width="200">
+  <img src="assets/logo/swe-mark-512.png" alt="UNG Software Engineering Club" width="200">
 </p>
 
 # SWE Club Styling Guide
@@ -82,7 +82,7 @@ The mark is a terminal prompt: a gold chevron, `SWE` in white, and a gold block 
 
 | File | Use it for |
 | --- | --- |
-| `swe-mark.svg`, `swe-mark-1024.png`, `swe-mark-400.png` | Profile pictures and anywhere the logo stands alone. Square; platforms crop it to a circle. |
+| `swe-mark.svg`, `swe-mark-1024.png`, `swe-mark-512.png` | Profile pictures and anywhere the logo stands alone. Square; platforms crop it to a circle. |
 | `swe-prompt.svg` | White and gold `>SWE▮` with no background, for blue and navy surfaces |
 | `swe-prompt-white.svg` | One-color white, for photos and single-color print on dark |
 | `swe-prompt-blue.svg` | One-color UNG Blue, for light backgrounds and single-color print |
