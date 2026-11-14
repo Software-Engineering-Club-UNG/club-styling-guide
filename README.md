@@ -4,7 +4,7 @@
 
 # SWE Club Styling Guide
 
-How the UNG Software Engineering Club looks and sounds: flyers, social posts, slides, websites, and repos. If you are making something with the club's name on it, start here.
+How the [UNG Software Engineering Club](https://codehawks.org/) looks and sounds: flyers, social posts, slides, websites, and repos. If you are making something with the club's name on it, start here.
 
 The short version: **old computers at UNG.** Blue and gold, monospace type, pixels, square corners, hard shadows. Inside that, there are three looks to choose from.
 
